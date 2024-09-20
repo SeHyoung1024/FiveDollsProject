@@ -12,7 +12,7 @@
 	<artifactId>projectEx</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>spring_boot_project_finalproject</name>
+	<name>spring_boot_project_projectEx</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -66,6 +66,39 @@
 			<version>3.0.3</version>
 			<scope>test</scope>
 		</dependency>
+				<!-- JSP 의존성 설정 -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		</dependency>
+		
+		<!-- 스프링 레거시 프로젝트에서는 자바코드가 바뀌면 자동으로 서버가 다시 시작하는데 부트에서는 
+		그런것이 없기 때문에 서버가 재시작할 수 있도록 설정을 해주어야함 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- 패스워드 암호화 의존성 추가 -->
+		<dependency>
+		    	<groupId>org.springframework.boot</groupId>
+		    	<artifactId>spring-boot-starter-security</artifactId>
+		</dependency> 
 	</dependencies>
 
 	<build>
