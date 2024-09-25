@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*index.css*/
+
+/********************Header****************/
+#headerBox{ /*Header 영역 (logoBox, topmenu)*/
+	display: flex; /* Flexbox 사용 */
+    justify-content: flex-end;
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 너비 100% 설정 */
+    height: 35px; /* 높이 설정 */
+    background-color: black; /* 배경색 */
+    color: white; /* 글자색 */
+    z-index: 1000; /* 다른 요소 위로 */
+    position: fixed;
+    
+}
+
+/* #logoBox{ logo img 영역 태그
+	float:left;
+	height:60px;
+	line-height:60px;
+} */
+
+#topMenuBox {
+	display: flex; /* 내부 요소를 수평으로 정렬 */
+    gap: 50px; /* 링크 사이 간격 */
+    margin-left : 900px;
+    z-index : 1000;
+    position: fixed;
+    /* background-color: black; 검은색 배경 설정 */
+    
+}
+#topMenuBox a {
+    color: white !important; /* 강제로 하얀색으로 설정 */
+}
+
+/***************************메인메뉴 고정****************************/
+/*윈도우 스크롤 시 메인메뉴 고정*/
+/*css 생성, js파일에서 addClass()로 사용*/
+.mainMenuFixed{
+	position:fixed;
+	top:0px; /*위쪽 여백이 없음*/
+}
+
+/*메인메뉴 아래에 그림자 표시*/
+.mainMenuShadow{
+	box-shadow:0 3px 5px 0px gray;
+	/*   offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
